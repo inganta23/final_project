@@ -1,0 +1,44 @@
+Johanes Inganta Karo-Karo 
+Medan, Indonesia 
+081218191202
+johanes230500@gmail.com
+
+Summary
+I am an 8th semester student majoring in Computer Science, Universitas Sumatera Utara. I'm interested in building something awesome with code and automate tasks with code, currently focused on Web Development especially the Frontend part and Competitive Programming. I like to explore new things and is able to work in a team.
+
+Work Experience
+IT Support Intern 
+Pengadilan Negeri Medan                   06/2021 - 08/2021
+Medan , Indonesia
+Helping administrative matters
+Help update the stationery shop equipment management website
+
+Skills
+Javascript
+CSS
+ReactJS
+Basic Design
+Web Development
+
+Education & Training
+Universitas Sumatera Utara                   Ilmu Komputer 
+01/1970
+Medan , Indonesia
+USU Computer Science Anniversary Committee
+3rd Place in the 2019 PORSENI Futsal Competition Organized by Computer Science Student Association Universitas Sumatera utara
+SMA Swasta Methodist 1                    Jurusan IPA 
+06/2018
+Medan , Indonesia
+Members of Siswa Siswi SMA Methodist 1 Anti Narkoba (SMANK)
+Progate                   Kursus HTML, CSS & Javascript 
+08/2021
+Medan , Indonesia
+Learn the application of html ,css and Javascript through the creation of projects provided on the Progate website.
+Dicoding                   Belajar Fundamental Front-End Web Development 
+05/2020
+Medan , Indonesia
+Create front-end web applications with JavaScript ES6, implement Web Components, Webpack, and display dynamic data from Web APIs using AJAX.
+
+Portofolio
+
+Github : https://github.com/inganta23?tab=repositories
