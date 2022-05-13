@@ -24,7 +24,7 @@ const Navbar = () => {
             <Link to="cart"><ShoppingCart role="button" /></Link>
           </Badge>
           <Badge badgeContent={2} color="primary">
-            <Favorite className="mx-2" role="button" />
+            <Link to="favorite"><Favorite className="mx-2" role="button" /></Link>
           </Badge>
         </div>
         <button

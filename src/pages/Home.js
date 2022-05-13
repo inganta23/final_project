@@ -1,24 +1,24 @@
-
-import About from "../components/About";
 import Banner from "../components/Banner";
-import Blogs from "../components/Blogs";
 import Collection from "../components/Collection";
 import Discount from "../components/Discount";
-import Navbar from "../components/Navbar";
-import Special from "../components/Special";
+import Footer from "../components/Footer";
+import ShopCategory from "../components/ShopCategory";
+import Why from "../components/Why";
 
-const Home = ({data}) => {
-    let items = [...data];
-    // console.log(data.length)
-    // items.length = 5;
-    return ( 
-        <div className="Home">
-            <Banner />
-            <Collection data={items}/>
-            {/* <Special /> */}
-            <Discount />
-        </div>
-     );
-}
- 
+const Home = ({ data, favorite }) => {
+  let items = [...data];
+  // console.log(data.length)
+  // items.length = 5;
+  return (
+    <div className="Home">
+      <Banner />
+      <Why />
+      <Collection data={items} favorite={favorite} />
+      <Discount />
+      <ShopCategory />
+      <Footer />
+    </div>
+  );
+};
+
 export default Home;
