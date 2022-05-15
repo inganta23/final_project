@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Banner = () => {
   return (
     <header
@@ -7,21 +9,21 @@ const Banner = () => {
       style={{ paddingTop: "104px" }}
     >
       <div className="container h-100 d-flex align-items-center carousel-inner">
-        <div className="text-center carousel-item active">
+        <div className="text-center carousel-item">
           <h2 className="text-capitalize text-white">best collection</h2>
           <h1 className="text-uppercase py-2 fw-bold text-white">
             new arrivals
           </h1>
-          <a href="#" className="btn mt-3 text-uppercase">
+          <Link to="collection" className="btn mt-3 text-uppercase">
             shop now
-          </a>
+          </Link>
         </div>
-        <div className="text-center carousel-item">
+        <div className="text-center carousel-item active">
           <h1 className="text-uppercase py-2 fw-bold text-white">Welcome to greenstore</h1>
           <h3 className="text-capitalize text-white">we sell clothes made from natural materials</h3>
-          <a href="#" className="btn mt-3 text-uppercase">
+          <Link to="collection" className="btn mt-3 text-uppercase">
             buy now
-          </a>
+          </Link>
         </div>
       </div>
       <button

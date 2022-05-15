@@ -7,7 +7,9 @@ export const paginateSlice = createSlice({
     dataBlogs: [],
     currentPage: 1,
     postsPerPage: 6,
-    shopCategory: "None"
+    cartPerPage: 5,
+    favoritePerPage: 5,
+    commentPerPage: 5
   },
   reducers: {
     
@@ -19,10 +21,7 @@ export const paginateSlice = createSlice({
     },
     setCurrentPage : (state, action) => {
         state.currentPage = action.payload;
-    },
-    setShopCategory : (state, action) => {
-      state.shopCategory = action.payload;
-  }
+    }
   },
 });
 

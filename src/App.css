@@ -1,17 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cantora+One&family=Montserrat:wght@400;500;600;700&display=swap");
 
 :root {
-  --lg-font: "Kaisei Tokumin", serif;
-  --sm-font: "Poppins", sans-serif;
-  --green: #83BD75;
+  --green: #83bd75;
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
 body {
-  font-family: var(--sm-font);
+  font-family: "Montserrat", sans-serif;
+}
+
+table {
+  border-bottom: 1px solid !important;
+}
+
+th {
+  padding: 10px;
 }
 
 /* button */
@@ -33,6 +39,15 @@ body {
   border-color: var(--green);
 }
 
+.nav-btn {
+  margin: 0 4px;
+  color: rgb(85, 85, 85);
+}
+
+.nav-btn:hover {
+  color: var(--green);
+}
+
 /* text color */
 .text-primary {
   color: var(--green) !important;
@@ -48,13 +63,18 @@ body {
   width: 30px;
 }
 
-.navbar-brand span {
+.navbar-brand h4 {
   letter-spacing: 2px;
-  font-family: var(--lg-font);
+  font-family: "Cantora One", sans-serif;
+  color: #4e944f;
+}
+
+.navbar-brand h4 span {
+  color: #000;
 }
 
 .nav-link:hover {
-  color: var(--green) !important;
+  color: #4E944F !important;
 }
 
 .nav-item {
@@ -68,7 +88,6 @@ body {
 
 .carousel-inner h1 {
   font-size: 50px;
-  font-family: var(--lg-font);
 }
 
 .carousel-item .btn {
@@ -83,17 +102,15 @@ body {
 .title h2::before {
   position: absolute;
   content: "";
-  width: 4px;
+  width: 6px;
   height: 50px;
-  background-color: var(--green);
+  background-color: #B4E197;
   left: -20px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-
-
 
 /* collection */
 .active-filter-btn {
@@ -140,7 +157,7 @@ body {
   color: red !important;
 }
 
-.category-select{
+.category-select {
   padding: 10px;
   border-radius: 25px;
   width: 120px;
@@ -170,7 +187,7 @@ body {
   cursor: pointer;
 }
 
-.shop-category img{
+.shop-category img {
   max-height: 265.5px;
 }
 
@@ -203,12 +220,29 @@ body {
 }
 
 /*Comment*/
-.comment-answer button:hover{
+.comment-answer button:hover {
   background-color: var(--green) !important;
   color: #fff !important;
   border-color: transparent;
 }
 
+/*Cart*/
+.checkout {
+  width: fit-content;
+}
+
+.cart-table button:hover {
+  background-color: var(--green) !important;
+  color: #fff !important;
+  border-color: transparent;
+}
+
+/*Favorite*/
+.favorite-table button:hover {
+  background-color: var(--green) !important;
+  color: #fff !important;
+  border-color: transparent;
+}
 
 /* select */
 select {
@@ -226,7 +260,6 @@ select {
     transition: ease-in 0.5s;
 } */
 
-
 /* offers */
 #offers {
   background: url(./assets/images/discount_img.jpg) center/cover no-repeat;
@@ -242,7 +275,6 @@ select {
 
 .offers-content h2 {
   font-size: 60px;
-  font-family: var(--lg-font);
 }
 
 .offers-content .btn {
@@ -283,7 +315,21 @@ select {
   border-color: #000;
 }
 
+/*Footer*/
+footer{
+  background-color: #4E944F;
+  margin-top: 80px;
+}
+footer a h4{
+  color: #fff;
+}
 
+footer a h4:hover{
+  text-decoration: underline;
+}
+footer a li span:hover{
+  text-decoration: underline;
+}
 
 @keyframes comein {
   to {

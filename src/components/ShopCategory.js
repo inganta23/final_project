@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { setShopCategory } from "../redux/paginate";
+import { setShopCategory } from "../redux/collectionRedux";
 
 const ShopCategory = () => {
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ const ShopCategory = () => {
             <div className="card shop-category my-2">
               <img
                 className="card-img img-fluid"
-                src={require(`../assets/images/shirt.jpg`)}
+                src="https://firebasestorage.googleapis.com/v0/b/mini-project-6b78f.appspot.com/o/shirt.jpg?alt=media&token=a4dcc101-8515-4c54-bdaf-4c60513920b8"
                 alt="shirt"
               />
               <div className="card-img-overlay text-white d-flex flex-column justify-content-center">
@@ -27,7 +27,7 @@ const ShopCategory = () => {
             <div className="card shop-category my-2">
               <img
                 className="card-img img-fluid"
-                src={require(`../assets/images/t-shirt.jpg`)}
+                src="https://firebasestorage.googleapis.com/v0/b/mini-project-6b78f.appspot.com/o/t-shirt.jpg?alt=media&token=005277f2-da3e-4c57-becd-b0fd90459ccd"
                 alt="t-shirt"
               />
               <div className="card-img-overlay text-white d-flex flex-column justify-content-center">
@@ -39,7 +39,7 @@ const ShopCategory = () => {
             <div className="card shop-category my-2">
               <img
                 className="card-img img-fluid"
-                src={require(`../assets/images/trousers.jpg`)}
+                src="https://firebasestorage.googleapis.com/v0/b/mini-project-6b78f.appspot.com/o/trousers.jpg?alt=media&token=38fbc3d7-74f8-4b9f-9552-962027d26188"
                 alt="trousers"
               />
               <div className="card-img-overlay text-white d-flex flex-column justify-content-center">

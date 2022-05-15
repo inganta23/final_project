@@ -2,18 +2,13 @@ import { Favorite, SearchOutlined } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import useInsertFav from "../graphql/InsertFavourite";
 import { useDeleteFavBarang } from "../graphql/DeleteFavourite";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 
-
-const All = ({
-  data,
-  rating,
-  favorite,
-  favId,
-  setFavId
-}) => {
+const All = ({ data, rating, favId }) => {
+  const path = window.location.pathname;
   const { insertFavData } = useInsertFav();
   const { deleteFavDataBarang } = useDeleteFavBarang();
-  let path = window.location.pathname;
 
   const handleFavorite = (id) => {
     let element = document.getElementsByClassName(`favorite${id}`)[0];
@@ -35,16 +30,9 @@ const All = ({
   return (
     <>
       {data.map((item) => (
-        <div
-          key={item.id}
-          className="col-md-6 col-lg-4 col-xl-3 p-2 collect"
-        >
+        <div key={item.id} className="col-md-6 col-lg-4 col-xl-3 p-2 collect">
           <div className="collection-img position-relative">
-            <img
-              src={`${item.gambar}`}
-              alt="collection"
-              className="w-100"
-            />
+            <img src={`${item.gambar}`} alt="collection" className="w-100" />
             <span className="position-absolute bg-primary text-white d-flex align-items-center justify-content-center">
               sale
             </span>
@@ -82,7 +70,6 @@ const All = ({
           </div>
         </div>
       ))}
-      
     </>
   );
 };

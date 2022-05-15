@@ -1,5 +1,5 @@
 import Banner from "../components/Banner";
-import Collection from "../components/Collection";
+import Collection from "./Collection";
 import Discount from "../components/Discount";
 import Footer from "../components/Footer";
 import ShopCategory from "../components/ShopCategory";

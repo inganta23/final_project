@@ -1,20 +1,16 @@
-import { useDispatch } from "react-redux";
-import { setCurrentPage } from "../redux/paginate";
 
-const Pagination = ({ postsPerPage, totalPosts, path }) => {
+const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
   const pageNumbers = [];
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
     pageNumbers.push(i);
   }
-  const dispatch = useDispatch();
   return (
-    <nav>
+    <nav className="mt-2">
       <ul className="pagination pagination-lg justify-content-center">
         {pageNumbers.map((number) => (
           <li key={number} className="page-item">
-            {path === "/collection"}
             <button
-              onClick={() => dispatch(setCurrentPage(number))}
+              onClick={() => paginate(number)}
               className="page-link"
             >
               {number}

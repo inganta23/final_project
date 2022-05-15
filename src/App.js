@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
-import Collection from "./components/Collection";
-import Blogs from "./components/Blogs";
-import About from "./components/About";
+import Collection from "./pages/Collection";
+import Blogs from "./pages/Blogs";
+import About from "./pages/About";
 import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
@@ -16,6 +16,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setDataBlogs, setLoadingBlogs } from "./redux/paginate";
 
 function App() {
+  // localStorage.clear();
   const { data, loading } = useQueryBarang();
   const { data: dataCart, loading: loadingCart } = useQueryCart();
   const { data: dataFav, loading: loadingFav } = useQueryFavourite();
@@ -32,7 +33,7 @@ function App() {
       dispatch(setLoadingBlogs(true));
       try {
         const { data: response } = await axios.get(
-          "https://newsapi.org/v2/everything?q=reforestation&from=2022-04-11&sortBy=publishedAt&apiKey=a183061854114cdfac5832f0ea03aa6a"
+          "https://newsapi.org/v2/everything?q=reforestation&from=2022-04-15&sortBy=publishedAt&apiKey=329d65419a024a4d9485c4f6137051ec"
         );
         dispatch(setDataBlogs(response.articles));
       } catch (error) {
@@ -52,8 +53,8 @@ function App() {
   if (loading || loadingFav || loadingCart) return <p>Loading</p>;
   //Get Total Biaya
   let totalBiaya = 0;
-  let biaya = dataCart?.kampus_merdeka_cart.map(
-    (item) => (+item.barang.harga * 1000) * (item.kuantitas)
+  const biaya = dataCart?.kampus_merdeka_cart.map(
+    (item) => +item.barang.harga * 1000 * item.kuantitas
   );
   //Penambahan titik setiap 3 bilangan dari belakang
   if (biaya[0] !== undefined) {
@@ -62,9 +63,10 @@ function App() {
       .toString()
       .replace(/\B(?=(\d{3})+(?!\d))/g, ".");
   }
+
   return (
     <div className="App mx-auto">
-      <Navbar />
+      <Navbar cartLength={dataCart?.kampus_merdeka_cart.length} favLength={dataFav?.kampus_merdeka_favorite.length} />
       <Routes>
         <Route
           index

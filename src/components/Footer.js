@@ -1,14 +1,19 @@
-import { Email, Instagram, LinkedIn, LocationOnRounded, Phone } from "@mui/icons-material";
+import {
+  Email,
+  Instagram,
+  LinkedIn,
+  LocationOnRounded,
+  Phone,
+} from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary" style={{marginTop: "80px"}}>
+    <footer>
       <div className="container p-5">
         <div className="row text-light">
           <div className="col-md-12 col-lg-3 footer-column">
-            <h4>GreenStore</h4>
-            <p>Desc</p>
+            <Link to="/" className="text-decoration-none"><h4>GreenStore</h4></Link>
           </div>
           <div className="col-md-12 col-lg-3 footer-column">
             <h4>Links</h4>
@@ -93,7 +98,6 @@ const Footer = () => {
                   </p>
                 </li>
               </a>
-        
             </ul>
           </div>
         </div>
