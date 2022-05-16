@@ -24,7 +24,6 @@ const All = ({ data, rating, favId }) => {
     element.classList.toggle("active");
   };
 
-  // console.log(favId)
   return (
     <>
       {data.map((item) => (

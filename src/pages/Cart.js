@@ -15,17 +15,19 @@ const Cart = ({ items, totalBiaya }) => {
   useEffect(() => {
     dispatch(setCurrentPage(1));
     dispatch(setEdit(false));
-    if (items[0] !== undefined)
+    if (items[0]) {
       dispatch(
         setKuantitas(
           items.map((item) => item.kuantitas).reduce((a, b) => a + b)
         )
       );
+    } else {
+      dispatch(setKuantitas(0));
+    }
   }, [items]);
+
   const { updateCartData } = useUpdateCart();
   const { DeleteCartData } = useDeleteCart();
-  // const [edit, setEdit] = useState(false);
-  // const [update, setUpdate] = useState({ id: "", kuantitas: "", nama: "" });
   const { kuantitas } = useSelector((state) => state.cartRedux);
   const { update } = useSelector((state) => state.cartRedux);
   const { cartPerPage } = useSelector((state) => state.cartRedux);
@@ -56,10 +58,7 @@ const Cart = ({ items, totalBiaya }) => {
   };
 
   return (
-    <div
-      className="d-flex flex-column justify-content-center"
-      style={{ marginTop: "100px" }}
-    >
+    <div className="cart-display d-flex flex-column justify-content-center">
       <div className="container">
         {edit && (
           <form

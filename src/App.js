@@ -14,6 +14,7 @@ import { useQueryCart, queryCart } from "./graphql/QueryCart";
 import { useQueryFavourite } from "./graphql/QueryFavourite";
 import { useDispatch, useSelector } from "react-redux";
 import { setDataBlogs, setLoadingBlogs } from "./redux/blogRedux";
+import NotFound from "./pages/NotFound";
 
 function App() {
   // localStorage.clear();
@@ -50,10 +51,12 @@ function App() {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = dataBlogs.slice(indexOfFirstPost, indexOfLastPost);
 
-  if (loading || loadingFav || loadingCart) return <p>Loading</p>;
+  if (loading || loadingFav || loadingCart || loadingBlogs)
+    return <p>Loading</p>;
+
   //Get Total Biaya
   let totalBiaya = 0;
-  const biaya = dataCart?.kampus_merdeka_cart.map(
+  const biaya = dataCart.kampus_merdeka_cart.map(
     (item) => +item.barang.harga * 1000 * item.kuantitas
   );
   //Penambahan titik setiap 3 bilangan dari belakang
@@ -66,7 +69,10 @@ function App() {
 
   return (
     <div className="App mx-auto">
-      <Navbar cartLength={dataCart?.kampus_merdeka_cart.length} favLength={dataFav?.kampus_merdeka_favorite.length} />
+      <Navbar
+        cartLength={dataCart.kampus_merdeka_cart.length}
+        favLength={dataFav.kampus_merdeka_favorite.length}
+      />
       <Routes>
         <Route
           index
@@ -89,22 +95,13 @@ function App() {
           <Route
             path=":id"
             element={
-              <Detail data={data.kampus_merdeka_barang} queryCart={queryCart} />
+              <Detail data={data.kampus_merdeka_barang}/>
             }
           />
         </Route>
         <Route
           path="blogs"
-          element={
-            loadingBlogs ? (
-              <p>Loading</p>
-            ) : (
-              <Blogs
-                blogs={currentPosts}
-                totalPosts={dataBlogs.length}
-              />
-            )
-          }
+          element={<Blogs blogs={currentPosts} totalPosts={dataBlogs.length} />}
         />
         <Route path="about" element={<About />} />
         <Route
@@ -112,7 +109,6 @@ function App() {
           element={
             <Cart
               items={dataCart.kampus_merdeka_cart}
-              queryCart={queryCart}
               totalBiaya={totalBiaya}
             />
           }
@@ -121,6 +117,7 @@ function App() {
           path="favorite"
           element={<Favorite items={dataFav.kampus_merdeka_favorite} />}
         />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

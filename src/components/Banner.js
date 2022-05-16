@@ -6,7 +6,6 @@ const Banner = () => {
       id="header"
       className="vh-100 carousel slide"
       data-bs-ride="carousel"
-      style={{ paddingTop: "104px" }}
     >
       <div className="container h-100 d-flex align-items-center carousel-inner">
         <div className="text-center carousel-item">

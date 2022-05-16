@@ -86,6 +86,10 @@ th {
   background: url(https://firebasestorage.googleapis.com/v0/b/mini-project-6b78f.appspot.com/o/slider3.jpg?alt=media&token=f2c4c8f3-38d1-4815-9654-c3cad6787dc9) top/cover no-repeat;
 }
 
+#header{
+  padding-top: 104px;
+}
+
 .carousel-inner h1 {
   font-size: 50px;
 }
@@ -236,6 +240,10 @@ th {
 }
 
 /*Cart*/
+.cart-display{
+  margin-top: 100px;
+}
+
 .checkout {
   width: fit-content;
 }
@@ -260,15 +268,6 @@ select {
   cursor: pointer;
 }
 
-/* .collection-img:hover > .overlay {
-    width:100%;
-    height:100%;
-    position:absolute;
-    background-color:#000;
-    opacity:0.5;
-    transition: ease-in 0.5s;
-} */
-
 /* offers */
 #offers {
   background: url(https://firebasestorage.googleapis.com/v0/b/mini-project-6b78f.appspot.com/o/discount_img.jpg?alt=media&token=863acc43-3b0c-4dc0-83dc-e5029f727560) center/cover no-repeat;
@@ -291,38 +290,15 @@ select {
 }
 
 /* about */
-#about {
-  background-color: rgba(179, 179, 179, 0.05);
-}
-
-/* newsletter */
-/* #newsletter {
-  background-color: rgba(179, 179, 179, 0.05);
-}
-
-#newsletter p {
+#about img{
   max-width: 600px;
 }
 
-#newsletter .input-group {
-  max-width: 500px;
+/*Not Found*/
+#not-found{
+  text-align: center;
+  margin-top: 200px;
 }
-
-#newsletter .form-control {
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
-}
-
-#newsletter .btn {
-  background-color: var(--green);
-  color: #fff;
-  border-color: var(--green);
-}
-
-#newsletter .btn:hover {
-  background-color: #000;
-  border-color: #000;
-} */
 
 /*Footer*/
 footer{

@@ -13,7 +13,6 @@ import {
 import Pagination from "../components/Pagination";
 
 const Comment = ({ id }) => {
-  // const [editId, setEditId] = useState("");
   const { insertCommentData } = useInsertComment();
   const { updateCommentData } = useUpdateComment();
   const { deleteCommentData } = useDeleteComment();
