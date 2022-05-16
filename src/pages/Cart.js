@@ -9,6 +9,7 @@ import {
   setKuantitas,
 } from "../redux/cartRedux";
 import Pagination from "../components/Pagination";
+import { CloseButton } from "react-bootstrap";
 
 const Cart = ({ items, totalBiaya }) => {
   const dispatch = useDispatch();
@@ -63,8 +64,7 @@ const Cart = ({ items, totalBiaya }) => {
         {edit && (
           <form
             onSubmit={handleClickUpdate}
-            className="mx-auto mt-5"
-            style={{ width: "fit-content" }}
+            className="edit-cart mx-auto mt-5 d-flex flex-column"
           >
             <h4>Edit Kuantits {update.nama}</h4>
             <label>Masukkan kuantitas : </label>
@@ -77,7 +77,21 @@ const Cart = ({ items, totalBiaya }) => {
               }
             />
             <br />
-            <button type="submit">Submit</button>
+            <div className="d-flex justify-content-between">
+              <button
+                type="submit"
+                className="mt-1 border-1 bg-light text-dark "
+              >
+                Submit
+              </button>
+              <button
+                type="submit"
+                className="mt-1 border-1 bg-light text-dark "
+                onClick={() => dispatch(setEdit(false))}
+              >
+                Close
+              </button>
+            </div>
           </form>
         )}
         <table className="mt-5 w-100 cart-table">

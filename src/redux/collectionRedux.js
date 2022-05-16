@@ -4,7 +4,7 @@ export const collectionReduxSlice = createSlice({
   name: "collectionRedux",
   initialState: {
     shopCategory: "None",
-    barangPerPage: 4,
+    barangPerPage: 8,
     currentPage: 1,
     filter: "all",
     favId: new Set()

@@ -74,7 +74,7 @@ th {
 }
 
 .nav-link:hover {
-  color: #4E944F !important;
+  color: #4e944f !important;
 }
 
 .nav-item {
@@ -83,10 +83,11 @@ th {
 
 /* header */
 #header {
-  background: url(https://firebasestorage.googleapis.com/v0/b/mini-project-6b78f.appspot.com/o/slider3.jpg?alt=media&token=f2c4c8f3-38d1-4815-9654-c3cad6787dc9) top/cover no-repeat;
+  background: url(https://firebasestorage.googleapis.com/v0/b/mini-project-6b78f.appspot.com/o/slider3.jpg?alt=media&token=f2c4c8f3-38d1-4815-9654-c3cad6787dc9)
+    top/cover no-repeat;
 }
 
-#header{
+#header {
   padding-top: 104px;
 }
 
@@ -108,7 +109,7 @@ th {
   content: "";
   width: 6px;
   height: 50px;
-  background-color: #B4E197;
+  background-color: #b4e197;
   left: -20px;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -148,7 +149,7 @@ th {
   transition: all ease-in 0.1s;
 }
 
-.collection-img img{
+.collection-img img {
   max-height: 308px !important;
 }
 
@@ -208,7 +209,7 @@ th {
 }
 
 /* Detail */
-.detail img{
+.detail img {
   max-height: 308px !important;
   max-width: 308px !important;
 }
@@ -240,7 +241,7 @@ th {
 }
 
 /*Cart*/
-.cart-display{
+.cart-display {
   margin-top: 100px;
 }
 
@@ -249,6 +250,16 @@ th {
 }
 
 .cart-table button:hover {
+  background-color: var(--green) !important;
+  color: #fff !important;
+  border-color: transparent;
+}
+
+.edit-cart {
+  width: fit-content;
+}
+
+.edit-cart button:hover {
   background-color: var(--green) !important;
   color: #fff !important;
   border-color: transparent;
@@ -270,7 +281,8 @@ select {
 
 /* offers */
 #offers {
-  background: url(https://firebasestorage.googleapis.com/v0/b/mini-project-6b78f.appspot.com/o/discount_img.jpg?alt=media&token=863acc43-3b0c-4dc0-83dc-e5029f727560) center/cover no-repeat;
+  background: url(https://firebasestorage.googleapis.com/v0/b/mini-project-6b78f.appspot.com/o/discount_img.jpg?alt=media&token=863acc43-3b0c-4dc0-83dc-e5029f727560)
+    center/cover no-repeat;
 }
 
 #offers .row {
@@ -290,29 +302,29 @@ select {
 }
 
 /* about */
-#about img{
+#about img {
   max-width: 600px;
 }
 
 /*Not Found*/
-#not-found{
+#not-found {
   text-align: center;
   margin-top: 200px;
 }
 
 /*Footer*/
-footer{
-  background-color: #4E944F;
+footer {
+  background-color: #4e944f;
   margin-top: 80px;
 }
-footer a h4{
+footer a h4 {
   color: #fff;
 }
 
-footer a h4:hover{
+footer a h4:hover {
   text-decoration: underline;
 }
-footer a li span:hover{
+footer a li span:hover {
   text-decoration: underline;
 }
 

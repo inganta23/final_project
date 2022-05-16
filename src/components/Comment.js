@@ -159,9 +159,16 @@ const Comment = ({ id }) => {
                 </div>
                 <button
                   type="submit"
-                  className="btn btn-primary mt-3 px-3 py-1"
+                  className="btn btn-primary mt-3 me-1 px-3 py-1"
                 >
                   Submit
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-primary mt-3 px-3 py-1"
+                  onClick={() => dispatch(setEditId(""))}
+                >
+                  Close
                 </button>
               </form>
             </>

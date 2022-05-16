@@ -17,7 +17,6 @@ import { setDataBlogs, setLoadingBlogs } from "./redux/blogRedux";
 import NotFound from "./pages/NotFound";
 
 function App() {
-  // localStorage.clear();
   const { data, loading } = useQueryBarang();
   const { data: dataCart, loading: loadingCart } = useQueryCart();
   const { data: dataFav, loading: loadingFav } = useQueryFavourite();
