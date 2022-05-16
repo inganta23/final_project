@@ -1,13 +1,13 @@
 import { combineReducers } from "@reduxjs/toolkit";
 
-import paginateReducer from "./paginate";
+import blogReduxReducer from "./blogRedux";
 import collectionReduxReducer from "./collectionRedux";
 import commentReduxReducer from "./commentRedux";
 import cartReduxReducer from "./cartRedux";
 import favoriteReduxReducer from "./favoriteRedux";
 
 const rootReducer = combineReducers({
-  paginate: paginateReducer,
+  blogRedux: blogReduxReducer,
   collectionRedux: collectionReduxReducer,
   commentRedux: commentReduxReducer,
   cartRedux: cartReduxReducer,

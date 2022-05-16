@@ -83,7 +83,7 @@ th {
 
 /* header */
 #header {
-  background: url(./assets/slider3.jpg) top/cover no-repeat;
+  background: url(https://firebasestorage.googleapis.com/v0/b/mini-project-6b78f.appspot.com/o/slider3.jpg?alt=media&token=f2c4c8f3-38d1-4815-9654-c3cad6787dc9) top/cover no-repeat;
 }
 
 .carousel-inner h1 {
@@ -144,6 +144,10 @@ th {
   transition: all ease-in 0.1s;
 }
 
+.collection-img img{
+  max-height: 308px !important;
+}
+
 .rating {
   color: var(--pink) !important;
 }
@@ -200,6 +204,11 @@ th {
 }
 
 /* Detail */
+.detail img{
+  max-height: 308px !important;
+  max-width: 308px !important;
+}
+
 .size label {
   display: inline-block;
   width: 70px;
@@ -262,7 +271,7 @@ select {
 
 /* offers */
 #offers {
-  background: url(./assets/images/discount_img.jpg) center/cover no-repeat;
+  background: url(https://firebasestorage.googleapis.com/v0/b/mini-project-6b78f.appspot.com/o/discount_img.jpg?alt=media&token=863acc43-3b0c-4dc0-83dc-e5029f727560) center/cover no-repeat;
 }
 
 #offers .row {
@@ -287,7 +296,7 @@ select {
 }
 
 /* newsletter */
-#newsletter {
+/* #newsletter {
   background-color: rgba(179, 179, 179, 0.05);
 }
 
@@ -313,7 +322,7 @@ select {
 #newsletter .btn:hover {
   background-color: #000;
   border-color: #000;
-}
+} */
 
 /*Footer*/
 footer{

@@ -2,8 +2,6 @@ import { Favorite, SearchOutlined } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import useInsertFav from "../graphql/InsertFavourite";
 import { useDeleteFavBarang } from "../graphql/DeleteFavourite";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
 
 const All = ({ data, rating, favId }) => {
   const path = window.location.pathname;

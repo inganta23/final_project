@@ -8,7 +8,7 @@ const Why = () => {
         <div className="d-flex justify-content-evenly flex-wrap my-5">
           <div className="d-flex flex-column my-2" style={{ width: "14rem" }}>
             <img
-              src={require("../assets/shipped.png")}
+              src="https://firebasestorage.googleapis.com/v0/b/mini-project-6b78f.appspot.com/o/shipped.png?alt=media&token=c4897d47-e873-4db0-a526-0f259e90eb4d"
               className="card-img-top mb-4"
               alt="ship"
             />
@@ -18,7 +18,7 @@ const Why = () => {
           </div>
           <div className="d-flex flex-column my-2 mx-2" style={{ width: "14rem" }}>
             <img
-              src={require("../assets/planet-earth.png")}
+              src="https://firebasestorage.googleapis.com/v0/b/mini-project-6b78f.appspot.com/o/planet-earth.png?alt=media&token=90787e61-e897-4287-b537-f20ee524e93c"
               className="card-img-top mb-4"
               alt="ship"
             />
@@ -28,7 +28,7 @@ const Why = () => {
           </div>
           <div className="d-flex flex-column my-2" style={{ width: "14rem" }}>
             <img
-              src={require("../assets/customer-service.png")}
+              src="https://firebasestorage.googleapis.com/v0/b/mini-project-6b78f.appspot.com/o/customer-service.png?alt=media&token=9481c35c-d765-4485-9f92-86078a089da1"
               className="card-img-top mb-4"
               alt="ship"
             />

@@ -6,7 +6,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import { ApolloProvider } from "@apollo/client";
-import client from "./graphql/apollo-setup";
+import client from "./graphql/ApolloSetup";
 import { store, persistor } from "./redux/store";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";

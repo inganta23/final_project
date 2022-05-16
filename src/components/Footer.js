@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="container p-5">
         <div className="row text-light">
           <div className="col-md-12 col-lg-3 footer-column">
-            <Link to="/" className="text-decoration-none"><h4>GreenStore</h4></Link>
+            <a href="#" className="text-decoration-none"><h4>GreenStore</h4></a>
           </div>
           <div className="col-md-12 col-lg-3 footer-column">
             <h4>Links</h4>
@@ -78,7 +78,7 @@ const Footer = () => {
           <div className="col-md-12 col-lg-3 footer-column">
             <h4>Follow Us</h4>
             <ul className="nav flex-column">
-              <a href="#" className="text-decoration-none text-light ">
+              <a href="https://www.linkedin.com/in/johanes-inganta-karo-karo-066193225/" target="_blank" className="text-decoration-none text-light ">
                 <li className="nav-item border-0">
                   <p>
                     <span className="footer-title">
@@ -88,7 +88,7 @@ const Footer = () => {
                   </p>
                 </li>
               </a>
-              <a href="#" className="text-decoration-none text-light">
+              <a href="https://www.instagram.com/johanes.karokaro/" target="_blank" className="text-decoration-none text-light">
                 <li className="nav-item border-0">
                   <p>
                     <span className="footer-title">

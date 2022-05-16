@@ -6,14 +6,14 @@ const Navbar = ({ cartLength, favLength }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
       <div className="container">
-        <Link
+        <a
           className="navbar-brand d-flex justify-content-between align-items-center order-lg-0"
-          to="/"
+          href="#"
         >
           <h4 className="text-capitalize fw-lighter ms-2">
             Green<span>Store</span>
           </h4>
-        </Link>
+        </a>
         <div className="order-lg-2">
           <Link className="nav-btn border-0" to="cart">
             <Badge badgeContent={cartLength} color="primary">

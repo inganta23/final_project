@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
-import { useQueryComments, queryComments } from "../graphql/QueryComments";
+import { useEffect } from "react";
+import { useQueryComments } from "../graphql/QueryComments";
+import useDeleteComment from "../graphql/DeleteComment";
 import useInsertComment from "../graphql/InsertComment";
 import useUpdateComment from "../graphql/UpdateComment";
 import { useSelector, useDispatch } from "react-redux";
@@ -15,6 +16,7 @@ const Comment = ({ id }) => {
   // const [editId, setEditId] = useState("");
   const { insertCommentData } = useInsertComment();
   const { updateCommentData } = useUpdateComment();
+  const { deleteCommentData } = useDeleteComment();
   const { currentPage } = useSelector((state) => state.commentRedux);
   const { commentPerPage } = useSelector((state) => state.commentRedux);
   const { editId } = useSelector((state) => state.commentRedux);
@@ -176,7 +178,7 @@ const Comment = ({ id }) => {
               <small className="d-block">{comment.pengarang}</small>
               <button
                 type="button"
-                className="border-1 my-2 bg-light text-dark "
+                className="border-1 border-dark bg-transparent my-2 me-2 bg-light text-dark "
                 onClick={() => {
                   dispatch(setEditId(comment.id));
                   dispatch(
@@ -187,7 +189,20 @@ const Comment = ({ id }) => {
                   );
                 }}
               >
-                Edit Comment
+                <small>Edit Comment</small>
+              </button>
+              <button
+                type="button"
+                className="border-1 bg-transparent border-dark my-2 bg-light text-dark "
+                onClick={() =>
+                  deleteCommentData({
+                    variables: {
+                      id: comment.id,
+                    },
+                  })
+                }
+              >
+                <small>Delete Comment</small>
               </button>
             </div>
           )

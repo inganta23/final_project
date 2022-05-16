@@ -23,7 +23,7 @@ const About = () => {
             </div>
             <div className="col-lg-6 order-lg-0">
               <img
-                src={require("../assets/images/about-us.jpg")}
+                src="https://firebasestorage.googleapis.com/v0/b/mini-project-6b78f.appspot.com/o/about-us.jpg?alt=media&token=35abc7f1-f67c-41a8-b5a2-fdd6f4e91b4e"
                 alt="About"
                 className="img-fluid"
               />

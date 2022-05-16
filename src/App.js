@@ -13,7 +13,7 @@ import useQueryBarang from "./graphql/QueryBarang";
 import { useQueryCart, queryCart } from "./graphql/QueryCart";
 import { useQueryFavourite } from "./graphql/QueryFavourite";
 import { useDispatch, useSelector } from "react-redux";
-import { setDataBlogs, setLoadingBlogs } from "./redux/paginate";
+import { setDataBlogs, setLoadingBlogs } from "./redux/blogRedux";
 
 function App() {
   // localStorage.clear();
@@ -23,17 +23,17 @@ function App() {
 
   const dispatch = useDispatch();
 
-  const { postsPerPage } = useSelector((state) => state.paginate);
-  const { loadingBlogs } = useSelector((state) => state.paginate);
-  const { dataBlogs } = useSelector((state) => state.paginate);
-  const { currentPage } = useSelector((state) => state.paginate);
+  const { postsPerPage } = useSelector((state) => state.blogRedux);
+  const { loadingBlogs } = useSelector((state) => state.blogRedux);
+  const { dataBlogs } = useSelector((state) => state.blogRedux);
+  const { currentPage } = useSelector((state) => state.blogRedux);
 
   useEffect(() => {
     const fetchData = async () => {
       dispatch(setLoadingBlogs(true));
       try {
         const { data: response } = await axios.get(
-          "https://newsapi.org/v2/everything?q=reforestation&from=2022-04-15&sortBy=publishedAt&apiKey=329d65419a024a4d9485c4f6137051ec"
+          "https://newsapi.org/v2/everything?q=reforestation&from=2022-04-16&sortBy=publishedAt&apiKey=329d65419a024a4d9485c4f6137051ec"
         );
         dispatch(setDataBlogs(response.articles));
       } catch (error) {
@@ -101,7 +101,6 @@ function App() {
             ) : (
               <Blogs
                 blogs={currentPosts}
-                postsPerPage={postsPerPage}
                 totalPosts={dataBlogs.length}
               />
             )

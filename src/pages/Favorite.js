@@ -2,6 +2,7 @@ import { useDeleteFav } from "../graphql/DeleteFavourite";
 import { useSelector, useDispatch } from "react-redux";
 import { setCurrentPage } from "../redux/favoriteRedux";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Pagination from "../components/Pagination";
 
 const Favorite = ({ items }) => {
@@ -24,6 +25,8 @@ const Favorite = ({ items }) => {
     deleteFavData({ variables: { id: id } });
   };
 
+  console.log(favorites)
+
   return (
     <>
       <table className="w-75 favorite-table" style={{ margin: "auto", marginTop: "150px" }}>
@@ -43,14 +46,15 @@ const Favorite = ({ items }) => {
               <td>
                 <img
                   style={{ width: "100px" }}
-                  src={require(`../assets/images/c_${item.barang.id}.png`)}
+                  src={`${item.barang.gambar}`}
                   alt="cart"
                 />
               </td>
               <td>{item.barang.nama}</td>
               <td>{item.barang.harga}</td>
               <td>
-                <button className="border-1 bg-light text-dark " onClick={() => handleFavDelete(item.id)}>Delete</button>
+                <button className="border-1 bg-light text-dark me-2" onClick={() => handleFavDelete(item.id)}>Delete</button>
+                <Link to={`/collection/${item.barang.id}`}><button className="border-1 bg-light text-dark ">Detail</button></Link>
               </td>
             </tr>
           ))}

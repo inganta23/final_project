@@ -8,6 +8,7 @@ const queryFav = gql`
         nama
         harga
         id
+        gambar
       }
     }
   }

@@ -31,14 +31,12 @@ const Detail = ({ data }) => {
 
         <div className="row justify-content-center">
           <div className="col-lg-5 col-md-6 me-2">
-            <img src={require(`../assets/images/c_${id}.png`)} alt="" />
+            <img src={`${detail.gambar}`} alt="detail"/>
           </div>
           <div className="col-lg-5 col-md-6">
             <h2>{detail.nama}</h2>
             <p className="desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-              voluptate veniam corporis iusto tempore nobis ut pariatur
-              asperiores architecto neque.
+              {detail.deskripsi}
             </p>
             <p className="price"> Rp. {detail.harga}</p>
             <form onSubmit={handleSubmitCart}>

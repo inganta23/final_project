@@ -1,11 +1,12 @@
 import Pagination from "../components/Pagination";
-import { useDispatch } from "react-redux";
-import { setCurrentPage } from "../redux/paginate";
+import { useDispatch, useSelector } from "react-redux";
+import { setCurrentPage } from "../redux/blogRedux";
 import { useEffect } from "react";
 import Footer from "../components/Footer";
 
-const Blogs = ({ blogs, postsPerPage, totalPosts }) => {
+const Blogs = ({ blogs, totalPosts }) => {
   const dispatch = useDispatch();
+  const { postsPerPage } = useSelector((state) => state.blogRedux);
   useEffect(() => {
     dispatch(setCurrentPage(1));
   }, []);

@@ -8,7 +8,7 @@ import Why from "../components/Why";
 const Home = ({ data, favorite }) => {
   let items = [...data];
   // console.log(data.length)
-  // items.length = 5;
+  items.length = 8;
   return (
     <div className="Home">
       <Banner />
