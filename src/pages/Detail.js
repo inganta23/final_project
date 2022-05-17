@@ -2,11 +2,12 @@ import { useParams } from "react-router";
 import Comment from "../components/Comment";
 import { useState } from "react";
 import useInsertCart from "../graphql/InsertCart";
+import swal from "sweetalert";
 
 const Detail = ({ data }) => {
   const { insertCartData } = useInsertCart();
-  let { id } = useParams();
-  let detail = data.filter((dat) => dat.id === +id)[0];
+  const { id } = useParams();
+  const detail = data.filter((dat) => dat.id === +id)[0];
   let size = ["S", "M", "L", "XL"];
   size.length = size.indexOf(detail.ukuran) + 1;
 
@@ -20,6 +21,7 @@ const Detail = ({ data }) => {
     });
     setQuantity("");
     setCheck("");
+    swal("Berhasil", "Barang ditambahkan", "success");
   };
 
   return (

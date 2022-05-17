@@ -25,8 +25,6 @@ const Favorite = ({ items }) => {
     deleteFavData({ variables: { id: id } });
   };
 
-  console.log(favorites)
-
   return (
     <>
       <table className="w-75 favorite-table" style={{ margin: "auto", marginTop: "150px" }}>

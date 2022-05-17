@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Collection from "./pages/Collection";
 import Blogs from "./pages/Blogs";
 import About from "./pages/About";
+import { CircularProgress } from "@mui/material";
 import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
@@ -17,6 +18,7 @@ import { setDataBlogs, setLoadingBlogs } from "./redux/blogRedux";
 import NotFound from "./pages/NotFound";
 
 function App() {
+  // localStorage.clear();
   const { data, loading } = useQueryBarang();
   const { data: dataCart, loading: loadingCart } = useQueryCart();
   const { data: dataFav, loading: loadingFav } = useQueryFavourite();
@@ -33,7 +35,7 @@ function App() {
       dispatch(setLoadingBlogs(true));
       try {
         const { data: response } = await axios.get(
-          "https://newsapi.org/v2/everything?q=reforestation&from=2022-04-16&sortBy=publishedAt&apiKey=329d65419a024a4d9485c4f6137051ec"
+          "https://newsapi.org/v2/everything?q=reforestation&from=2022-04-20&sortBy=publishedAt&apiKey=329d65419a024a4d9485c4f6137051ec"
         );
         dispatch(setDataBlogs(response.articles));
       } catch (error) {
@@ -51,7 +53,12 @@ function App() {
   const currentPosts = dataBlogs.slice(indexOfFirstPost, indexOfLastPost);
 
   if (loading || loadingFav || loadingCart || loadingBlogs)
-    return <p>Loading</p>;
+    return (
+      <div className="d-flex flex-column align-items-center justify-content-center vh-100">
+        <CircularProgress />
+        <p>Loading</p>
+      </div>
+    );
 
   //Get Total Biaya
   let totalBiaya = 0;
@@ -93,9 +100,7 @@ function App() {
         >
           <Route
             path=":id"
-            element={
-              <Detail data={data.kampus_merdeka_barang}/>
-            }
+            element={<Detail data={data.kampus_merdeka_barang} />}
           />
         </Route>
         <Route

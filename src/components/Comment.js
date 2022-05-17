@@ -11,6 +11,7 @@ import {
   setEditComment,
 } from "../redux/commentRedux";
 import Pagination from "../components/Pagination";
+import swal from 'sweetalert';
 
 const Comment = ({ id }) => {
   const { insertCommentData } = useInsertComment();
@@ -50,7 +51,7 @@ const Comment = ({ id }) => {
         pengarang: "",
       })
     );
-    alert("Berhasil");
+    swal("Berhasil", "Komentar ditambahkan", "success");
   };
 
   const handleUpdateComment = (e) => {
@@ -72,9 +73,9 @@ const Comment = ({ id }) => {
   };
 
   if (loadingComments) return <p>Loading Comments</p>;
-  let indexOfLastComment = currentPage * commentPerPage;
-  let indexOfFirstComment = indexOfLastComment - commentPerPage;
-  let comments = dataComments.kampus_merdeka_comments.slice(
+  const indexOfLastComment = currentPage * commentPerPage;
+  const indexOfFirstComment = indexOfLastComment - commentPerPage;
+  const comments = dataComments.kampus_merdeka_comments.slice(
     indexOfFirstComment,
     indexOfLastComment
   );

@@ -9,7 +9,7 @@ import {
   setKuantitas,
 } from "../redux/cartRedux";
 import Pagination from "../components/Pagination";
-import { CloseButton } from "react-bootstrap";
+import swal from "sweetalert";
 
 const Cart = ({ items, totalBiaya }) => {
   const dispatch = useDispatch();
@@ -154,7 +154,7 @@ const Cart = ({ items, totalBiaya }) => {
           <button
             type="button"
             className="btn"
-            onClick={() => alert("Pembayaran Diproses")}
+            onClick={() => swal("Selamat", "Pembayaran Diproses", "success")}
           >
             CheckOut
           </button>
