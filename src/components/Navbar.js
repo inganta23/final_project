@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Favorite, ShoppingCart } from "@mui/icons-material";
 import { Badge } from "@mui/material";
 
-const Navbar = ({ cartLength, favLength }) => {
+const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
       <div className="container">
@@ -16,12 +16,12 @@ const Navbar = ({ cartLength, favLength }) => {
         </a>
         <div className="order-lg-2">
           <Link className="nav-btn border-0" to="cart">
-            <Badge badgeContent={cartLength} color="primary">
+            <Badge badgeContent={2} color="primary">
               <ShoppingCart role="button" />
             </Badge>
           </Link>
           <Link to="favorite" className="nav-btn border-0">
-            <Badge badgeContent={favLength} color="primary">
+            <Badge badgeContent={2} color="primary">
               <Favorite className="mx-2" role="button" />
             </Badge>
           </Link>

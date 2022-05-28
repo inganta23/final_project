@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setShopCategory } from "../redux/collectionRedux";
 
 const ShopCategory = () => {
-  const dispatch = useDispatch();
   return (
     <section className="my-5">
       <div className="container">
@@ -11,7 +8,7 @@ const ShopCategory = () => {
           <h2 className="position-relative d-inline-block">Shop By Category</h2>
         </div>
         <div className="d-flex justify-content-evenly flex-wrap my-5">
-          <Link to="collection" onClick={() => dispatch(setShopCategory("shirt"))}>
+          <Link to="collection">
             <div className="card shop-category my-2">
               <img
                 className="card-img img-fluid"
@@ -23,7 +20,7 @@ const ShopCategory = () => {
               </div>
             </div>
           </Link>
-          <Link to="collection" onClick={() => dispatch(setShopCategory("t-shirt"))}>
+          <Link to="collection">
             <div className="card shop-category my-2">
               <img
                 className="card-img img-fluid"
@@ -35,7 +32,7 @@ const ShopCategory = () => {
               </div>
             </div>
           </Link>
-          <Link to="collection" onClick={() => dispatch(setShopCategory("trousers"))}>
+          <Link to="collection">
             <div className="card shop-category my-2">
               <img
                 className="card-img img-fluid"

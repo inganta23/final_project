@@ -10,6 +10,9 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  position: relative;
+  padding-bottom: 300px;
+  min-height: 100vh;
 }
 
 table {
@@ -83,7 +86,7 @@ th {
 
 /* header */
 #header {
-  background: url(https://firebasestorage.googleapis.com/v0/b/mini-project-6b78f.appspot.com/o/slider3.jpg?alt=media&token=f2c4c8f3-38d1-4815-9654-c3cad6787dc9)
+  background: url(https://firebasestorage.googleapis.com/v0/b/mini-project-6b78f.appspot.com/o/black-friday-elements-assortment.jpg?alt=media&token=51c242c0-6517-440d-a551-e4b07bd71eee)
     top/cover no-repeat;
 }
 
@@ -316,6 +319,9 @@ select {
 footer {
   background-color: #4e944f;
   margin-top: 80px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 footer a h4 {
   color: #fff;

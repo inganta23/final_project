@@ -9,8 +9,8 @@ const Banner = () => {
     >
       <div className="container h-100 d-flex align-items-center carousel-inner">
         <div className="text-center carousel-item">
-          <h2 className="text-capitalize text-white">best collection</h2>
-          <h1 className="text-uppercase py-2 fw-bold text-white">
+          <h2 className="text-capitalize text-white" style={{textShadow: "2px 2px 5px #5c4f3a"}}>best collection</h2>
+          <h1 className="text-uppercase py-2 fw-bold text-white" style={{textShadow: "2px 2px 5px #5c4f3a"}}>
             new arrivals
           </h1>
           <Link to="collection" className="btn mt-3 text-uppercase">
@@ -18,8 +18,8 @@ const Banner = () => {
           </Link>
         </div>
         <div className="text-center carousel-item active">
-          <h1 className="text-uppercase py-2 fw-bold text-white">Welcome to greenstore</h1>
-          <h3 className="text-capitalize text-white">we sell clothes made from natural materials</h3>
+          <h1 className="text-uppercase py-2 fw-bold text-white" style={{textShadow: "2px 2px 5px #5c4f3a"}}>Welcome to greenstore</h1>
+          <h3 className="text-capitalize text-white" style={{textShadow: "2px 2px 5px #5c4f3a"}}>we sell clothes made from natural materials</h3>
           <Link to="collection" className="btn mt-3 text-uppercase">
             buy now
           </Link>
