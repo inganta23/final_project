@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import Products from "./Products";
 
-
 const Featured = () => {
   return (
     <section id="collection" className="py-5">
       <div className="container">
         <div className="title text-center">
-          <h2>Featured Product</h2>
+          <h2 className="position-relative d-inline-block">Featured Product</h2>
         </div>
         <div className="row g-0">
           <div className="collection-list mt-4 row gx-0 gy-3">

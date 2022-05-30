@@ -211,69 +211,7 @@ th {
   transform: translateY(-20px);
 }
 
-/* Detail */
-.detail img {
-  max-height: 308px !important;
-  max-width: 308px !important;
-}
 
-.size label {
-  display: inline-block;
-  width: 70px;
-  padding: 10px;
-  border: solid 2px #ccc;
-  transition: all 0.3s;
-  text-align: center;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.size input[type="radio"] {
-  display: none;
-}
-
-.size input[type="radio"]:checked + label {
-  border: solid 2px green;
-}
-
-/*Comment*/
-.comment-answer button:hover {
-  background-color: var(--green) !important;
-  color: #fff !important;
-  border-color: transparent;
-}
-
-/*Cart*/
-.cart-display {
-  margin-top: 100px;
-}
-
-.checkout {
-  width: fit-content;
-}
-
-.cart-table button:hover {
-  background-color: var(--green) !important;
-  color: #fff !important;
-  border-color: transparent;
-}
-
-.edit-cart {
-  width: fit-content;
-}
-
-.edit-cart button:hover {
-  background-color: var(--green) !important;
-  color: #fff !important;
-  border-color: transparent;
-}
-
-/*Favorite*/
-.favorite-table button:hover {
-  background-color: var(--green) !important;
-  color: #fff !important;
-  border-color: transparent;
-}
 
 /* select */
 select {
@@ -309,11 +247,6 @@ select {
   max-width: 600px;
 }
 
-/*Not Found*/
-#not-found {
-  text-align: center;
-  margin-top: 200px;
-}
 
 /*Footer*/
 footer {

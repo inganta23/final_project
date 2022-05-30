@@ -12,10 +12,10 @@ const Footer = () => {
     <footer>
       <div className="container p-5">
         <div className="row text-light">
-          <div className="col-md-12 col-lg-3 footer-column">
-            <a href="#" className="text-decoration-none"><h4>GreenStore</h4></a>
+          <div className="col-md-12 col-lg-4 footer-column">
+            <a href="#" className="text-decoration-none"><h4>FashionStore</h4></a>
           </div>
-          <div className="col-md-12 col-lg-3 footer-column">
+          <div className="col-md-12 col-lg-4 footer-column">
             <h4>Links</h4>
             <ul className="nav flex-column">
               <Link to="/" className="text-decoration-none text-light">
@@ -40,7 +40,7 @@ const Footer = () => {
               </Link>
             </ul>
           </div>
-          <div className="col-md-12 col-lg-3 footer-column">
+          <div className="col-md-12 col-lg-4 footer-column">
             <h4>Contact Us</h4>
             <ul className="nav flex-column">
               <a href="#" className="text-decoration-none text-light">
@@ -63,43 +63,10 @@ const Footer = () => {
                   </p>
                 </li>
               </a>
-              <a href="#" className="text-decoration-none text-light">
-                <li className="nav-item border-0">
-                  <p>
-                    <span className="footer-title">
-                      <Email />
-                    </span>
-                    johanes230500@gmail.com
-                  </p>
-                </li>
-              </a>
+             
             </ul>
           </div>
-          <div className="col-md-12 col-lg-3 footer-column">
-            <h4>Follow Us</h4>
-            <ul className="nav flex-column">
-              <a href="https://www.linkedin.com/in/johanes-inganta-karo-karo-066193225/" target="_blank" className="text-decoration-none text-light ">
-                <li className="nav-item border-0">
-                  <p>
-                    <span className="footer-title">
-                      <LinkedIn />
-                    </span>
-                    Johanes Inganta Karo Karo
-                  </p>
-                </li>
-              </a>
-              <a href="https://www.instagram.com/johanes.karokaro/" target="_blank" className="text-decoration-none text-light">
-                <li className="nav-item border-0">
-                  <p>
-                    <span className="footer-title">
-                      <Instagram />
-                    </span>
-                    johanes.karokaro
-                  </p>
-                </li>
-              </a>
-            </ul>
-          </div>
+          
         </div>
       </div>
     </footer>

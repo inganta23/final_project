@@ -1,5 +1,5 @@
 import Banner from "../components/Banner";
-import Collection from "../components/Featured";
+import Featured from "../components/Featured";
 import Discount from "../components/Discount";
 import Footer from "../components/Footer";
 import ShopCategory from "../components/ShopCategory";
@@ -11,7 +11,7 @@ const Home = () => {
     <div className="Home">
       <Banner />
       <Why />
-      <Collection />
+      <Featured />
       <Discount />
       <ShopCategory />
       <Footer />

@@ -11,7 +11,7 @@ const Navbar = () => {
           href="#"
         >
           <h4 className="text-capitalize fw-lighter ms-2">
-            Green<span>Store</span>
+            Fashion<span>Store</span>
           </h4>
         </a>
         <div className="order-lg-2">
